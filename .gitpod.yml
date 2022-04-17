@@ -1,0 +1,10 @@
+vscode:
+  extensions:
+    - eamodio.gitlens
+    - amazonwebservices.aws-toolkit-vscode
+    - ms-python.python
+    - ms-python.anaconda-extension-pack
+    - golang.Go
+    - ms-azuretools.vscode-docker
+    - ms-kubernetes-tools.vscode-kubernetes-tools
+    - hashicorp.terraform
