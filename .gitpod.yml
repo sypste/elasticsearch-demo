@@ -1,3 +1,13 @@
+tasks:
+  - name: Start Elasticsearch in background
+    init: docker pull bitnami/elasticsearch:8.1.2
+    command: docker run bitnami/elasticsearch:8.1.2
+
+ports:
+  - port: 9200
+    onOpen: open-preview
+    visibility: private
+
 vscode:
   extensions:
     - eamodio.gitlens
@@ -8,3 +18,5 @@ vscode:
     - ms-azuretools.vscode-docker
     - ms-kubernetes-tools.vscode-kubernetes-tools
     - hashicorp.terraform
+    - ms-toolsai.jupyter
+    - ria.elastic
