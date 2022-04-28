@@ -1,7 +1,7 @@
 tasks:
   - name: Start Elasticsearch in background
     init: docker pull bitnami/elasticsearch:8.1.2
-    command: docker run bitnami/elasticsearch:8.1.2
+    command: docker run -p 9200:9200 bitnami/elasticsearch:8.1.2
   - name: Install Python dependencies
     init: pip install -r requirements.txt
 
