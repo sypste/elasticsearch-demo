@@ -7,8 +7,8 @@ tasks:
 
 ports:
   - port: 9200
-    onOpen: open-browser
-    visibility: public
+    onOpen: ignore
+    visibility: private
 
 vscode:
   extensions:
