@@ -1,0 +1,33 @@
+{
+    "url": "https://en.wikipedia.org/wiki/Candidalysin",
+    "title": "Candidalysin",
+    "summary": "Candidalysin is a cytolytic 31-amino acid α-helical amphipathic peptide toxin secreted by the opportunistic pathogen Candida albicans. This toxin is a fungal example of a classical virulence factor. Hyphal morphogenesis in C. albicans is associated with damage to host epithelial cells; during this process Candidalysin is released and intercalates in host membranes. Candidalysin promotes damage of oral epithelial cells and induces lactate dehydrogenase release and calcium ion influx. It is unique in the fact that it is the first peptide toxin to be identified in any human fungal pathogen.Candidalysin is a product of the larger protein Ece1 (extent of cell elongation 1). Sequential processing of Ece1 at lysine/arginine residues by the proteases Kex2 and Kex1 releases several peptides, including the toxin Candidalysin. Consequently, Candidalysin is also known as Ece1-III62–92K. C. albicans strains missing Candidalysin do not damage epithelial cells and are said to be avirulent with respect to mucosal infections. The toxin is also responsible for the activation and propagation of a cellular immune response.",
+    "content": "Candidalysin is a cytolytic 31-amino acid α-helical amphipathic peptide toxin secreted by the opportunistic pathogen Candida albicans. This toxin is a fungal example of a classical virulence factor. Hyphal morphogenesis in C. albicans is associated with damage to host epithelial cells; during this process Candidalysin is released and intercalates in host membranes. Candidalysin promotes damage of oral epithelial cells and induces lactate dehydrogenase release and calcium ion influx. It is unique in the fact that it is the first peptide toxin to be identified in any human fungal pathogen.Candidalysin is a product of the larger protein Ece1 (extent of cell elongation 1). Sequential processing of Ece1 at lysine/arginine residues by the proteases Kex2 and Kex1 releases several peptides, including the toxin Candidalysin. Consequently, Candidalysin is also known as Ece1-III62–92K. C. albicans strains missing Candidalysin do not damage epithelial cells and are said to be avirulent with respect to mucosal infections. The toxin is also responsible for the activation and propagation of a cellular immune response.\n\n\n== Epithelial damage ==\nDuring epithelial infection, as candidalysin levels accumulate, tissue damage occurs. Candidalysin promotes damage of oral epithelial cells, which can be measured by the release of lactate dehydrogenase, and calcium ion influx which are characteristics of membrane destabilization and cell damage. Candidalysin is able to cause epithelial damage through  membrane intercalation and permeabilization. It causes IL-1β release and is a driver of inflammasome activation in macrophages.\n\n\n== Immune response ==\nEpithelial immunity can recognize Ece1-III62–92K without harming cells. Epithelial cells have evolved to particularly recognize the peptide, which indicates that during mucosal infection the fungus secretes this toxin. Immune cells can either be exposed extracellularly or intracellularly and this is due to the fact that phagocytes can be exposed to the fungal hyphae pre-phagocytosis or post-phagocytosis. Epithelial immunity is achieved predominantly through mitogen-activated protein kinase (MAPK) signaling, more specifically the p38 pathway. The p38 pathway leads to the activation of AP-1 transcription factor c-Fos and the ERK1/2 pathway. The ERK1/2 pathway then leads to the activation of the enzyme MAPK phosphatase 1 which regulates the immune response.\n\n\n=== p38 MAPK pathway ===\nThe p38 mitogen activated protein kinase (MAPK) pathway is similar to the JNK pathway but differs from the ERK pathway. The p38 MAP kinase, JNK MAP kinase, and ERK MAP kinase are all types of mammalian MAP kinases. The p38 MAP kinase is activated by two other MAP kinases known as MKK3 and MKK4. MKK4 is also known to activate the JNK MAP kinase, however, MKK3 is unique to the p38 MAP kinase. The p38 MAPK pathway is required to be activated by dual phosphorylation of the amino acids: tyrosine and threonine and also environmental stress and pro-inflammatory cytokines. Examples of environmental stress than can activate the p38 MAP Kinase include UV radiation and osmotic stress. Examples of pro-inflammatory cytokines that can activate the p38 MAP Kinase include tumor necrosis factor, Interleukin-1, and lipopolysaccharide (LPS). The p38 MAP kinase plays an important role in regulating Interleukin-10 synthesis and toll-like receptor signaling.\n\n\n=== MAPK phosphatase MKP1 ===\nMAPK Phosphatase 1 negatively regulates the activity of mitogen activate protein kinase (MAPK) activity. A deficiency of this phosphatase leads to a prolonged and continual activation of the p38 MAP kinase and JNK MAP kinase. MAPK phosphatase 1 is the founding member of the family of MAPK phosphatases which is a group of 11 phosphatases. The N-terminus of MAPK phosphatase 1 is responsible for the localization of the nucleus. The p38 MAPK and JNK pathways are preferred to be dephosphorylated over the ERK pathway.\n\n\n== References ==",
+    "links": [
+        "AP-1 transcription factor",
+        "Alpha helix",
+        "Amino acid",
+        "Amphiphile",
+        "Bibcode (identifier)",
+        "C-Jun N-terminal kinases",
+        "Candida albicans",
+        "Cytolysis",
+        "Doi (identifier)",
+        "Epithelium",
+        "Hypha",
+        "Interleukin 10",
+        "KEX1 carboxypeptidase",
+        "Kex2 endopeptidase",
+        "MAPK/ERK pathway",
+        "MAPK phosphatase",
+        "Mitogen-activated protein kinase",
+        "P38 mitogen-activated protein kinases",
+        "PMC (identifier)",
+        "PMID (identifier)",
+        "Peptide",
+        "S2CID (identifier)",
+        "Toll-like receptor",
+        "Toxin",
+        "Virulence factor"
+    ]
+}

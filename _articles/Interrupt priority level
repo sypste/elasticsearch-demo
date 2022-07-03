@@ -1,0 +1,25 @@
+{
+    "url": "https://en.wikipedia.org/wiki/Interrupt_priority_level",
+    "title": "Interrupt priority level",
+    "summary": "The interrupt priority level (IPL) is a part of the current system interrupt state, which indicates the interrupt requests that will currently be accepted. The IPL may be indicated in hardware by the registers in a Programmable Interrupt Controller, or in software by a bitmask or integer value and source code of threads\n\n",
+    "content": "The interrupt priority level (IPL) is a part of the current system interrupt state, which indicates the interrupt requests that will currently be accepted. The IPL may be indicated in hardware by the registers in a Programmable Interrupt Controller, or in software by a bitmask or integer value and source code of threads\n\n\n== Overview ==\nAn integer based IPL may be as small as a single bit, with just two values: 0 (all interrupts enabled) or 1 (all interrupts disabled), as in the MOS Technology 6502. However, some architectures permit a greater range of values, where each value enables interrupt requests that specify a higher level, while blocking ones from the same or lower level.\nAssigning different priorities to interrupt requests can be useful in trying to balance system throughput versus interrupt latency: some kinds of interrupts need to be responded to more quickly than others, but the amount of processing might not be large, so it makes sense to assign a higher priority to that kind of interrupt.\nControl of interrupt level was also used to synchronize access to kernel data structures. Thus, the level-3 scheduler interrupt handler would temporarily raise IPL to 7 before accessing any actual scheduler data structures, then lower back to 3 before actually switching process contexts. However, it was not allowed for an interrupt handler to lower IPL below that at which it was entered, since to do so could destroy the integrity of the synchronization system.\nOf course, multiprocessor systems add their own complications, which are not addressed here.\nRegardless of what the hardware might support, typical UNIX-type systems only make use of two levels: the minimum (all interrupts disabled) and the maximum (all interrupts enabled).\n\n\n== OpenVMS IPLs ==\nAs an example of one of the more elaborate IPL-handling systems ever deployed, the VAX computer and associated VMS operating system supports 32 priority levels, from 0 to 31. Priorities 16 and above are for requests from external hardware, while values below 16 are available for software interrupts (used internally by the operating system to schedule its own activities). Not all values are actually used, but here are some of the more important ones:\n\nlevel 31 is for the \"power-fail\" interrupt.\nlevel 24 is for the clock interrupt. Note this is a higher priority than I/O interrupts.\nlevels 20-23 are used for I/O devices.\nlevels 8-11 are used for fork interrupts. When a driver receives a device interrupt (priority 20-23), it is supposed to do as little processing as possible at such a high priority; instead, if any time-consuming operations need to be done, these are to be deferred by requesting a software interrupt in the 8-11 range; when this interrupt is triggered, the further processing will resume. Similar to this are \"bottom halves\" and their successors in the Linux kernel.\nlevel 7 is used to synchronize access to the process scheduler data structures.\nlevel 4 is used for I/O post-processing tasks—that is, final completion of a QIO request including returning results to the application process.\nlevel 3 is used for the process rescheduling interrupt. Any code executing at higher interrupt levels is not allowed to assume that there was a current process context (since a process reschedule might be in progress). In particular, page faults are not allowed at this or higher levels.\nlevel 2 is used to synchronize access to per-process data structures. Any time the kernel needs access to a process context, it sends that process a special kernel AST which executes in the process context at IPL 2.\nlevel 0 is the normal level for execution of non-interrupt code, including ordinary application code.Alpha hardware contains native support for IPLs.  When OpenVMS was ported to Itanium in 2001, the IPL scheme was simulated using features provided by the Itanium hardware.\n\n\n== See also ==\nIRQL\nInterrupt\nProgrammable Interrupt Controller\nspl (Unix)",
+    "links": [
+        "Asynchronous system trap",
+        "DEC Alpha",
+        "IRQL (Windows)",
+        "Interrupt",
+        "Interrupt request",
+        "Itanium",
+        "Latency (engineering)",
+        "Linux",
+        "MOS Technology 6502",
+        "Multiprocessor",
+        "OpenVMS",
+        "Page fault",
+        "Programmable Interrupt Controller",
+        "QIO",
+        "Spl (Unix)",
+        "UNIX",
+        "VAX"
+    ]
+}

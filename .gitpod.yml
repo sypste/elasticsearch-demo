@@ -13,8 +13,10 @@ ports:
 vscode:
   extensions:
     - eamodio.gitlens
+    - ria.elastic
     - ms-python.python
     - ms-python.anaconda-extension-pack
     - ms-azuretools.vscode-docker
     - ms-toolsai.jupyter
-    - ria.elastic
+    - ms-toolsai.jupyter-keymap
+    - ms-toolsai.jupyter-renderers

@@ -1,0 +1,25 @@
+{
+    "url": "https://en.wikipedia.org/wiki/Compact_controller",
+    "title": "Compact controller",
+    "summary": "A compact controller is a generic name given to a small autonomous controller which can control one or several control loops. They are also known as panel mounted, discrete, dedicated, or universal process controllers. The controllers can be easily configured and to control most types of control loop. Simple versions have a numerical display of the process values. Compact controllers in high-end equipment are available with touchscreen and graphical representation of the control loop or the system.In addition to the actual control loop, compact controllers can also take over control tasks and thus control the process sequence or parts thereof independently. Compact controllers can be found in almost all industries. For example, the program controller function is often used in the food industry, or in hardening to define specific temperature profiles.\n\n",
+    "content": "A compact controller is a generic name given to a small autonomous controller which can control one or several control loops. They are also known as panel mounted, discrete, dedicated, or universal process controllers. The controllers can be easily configured and to control most types of control loop. Simple versions have a numerical display of the process values. Compact controllers in high-end equipment are available with touchscreen and graphical representation of the control loop or the system.In addition to the actual control loop, compact controllers can also take over control tasks and thus control the process sequence or parts thereof independently. Compact controllers can be found in almost all industries. For example, the program controller function is often used in the food industry, or in hardening to define specific temperature profiles.\n\n\n== Construction ==\n\nCompact controllers are either fixed or modular and can therefore be extended. The inputs for the actual value are often universal and can be configured for different types of sensors and signals. Digital inputs are also available for the detection of switching operations. Various binary switching elements are available as outputs, such as relay, semiconductor relay, logic and MosFET outputs, and are used either for controlling binary actuators or for control signals. The analog outputs can be configured as voltage or current output, e.g. 4 ... 20 mA / 0 ... 10 V and are used for the continuous control of analog actuators such as, for example, control valves, thyristor power controllers or frequency converters.The operation, parameterization and configuration can be carried out via the device front, in addition, configuration programs are supplied in which the settings for the user can be clearly arranged. The connection between PC and controller can be established via USB, TCP / IP or serial interfaces.\n\n\n== References ==",
+    "links": [
+        "Actuator",
+        "Control loop",
+        "Control valve",
+        "Control valves",
+        "Doi (identifier)",
+        "Electric current",
+        "Food industry",
+        "Frequency changer",
+        "Hardening (metallurgy)",
+        "MOSFET",
+        "Relay",
+        "Sensor",
+        "Signal (electrical engineering)",
+        "TCP/IP Illustrated",
+        "Touchscreen",
+        "USB",
+        "Voltage"
+    ]
+}
