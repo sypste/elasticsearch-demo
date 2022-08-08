@@ -1,6 +1,6 @@
 tasks:
   - name: Start Elasticsearch in background
-    init: docker pull bitnami/elasticsearch:8.3.3
+    # init: docker pull bitnami/elasticsearch:8.3.3
     command: docker run -p 9200:9200 bitnami/elasticsearch:8.3.3
   - name: Upgrade pip
     init: |
