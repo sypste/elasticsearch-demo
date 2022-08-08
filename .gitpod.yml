@@ -2,8 +2,16 @@ tasks:
   - name: Start Elasticsearch in background
     # init: docker pull bitnami/elasticsearch:8.3.3
     command: docker run -p 9200:9200 bitnami/elasticsearch:8.3.3
-  - name: Install Python dependencies
-    init: pip install -r requirements.txt
+  - name: Configure python
+    init: |
+      # make new venv
+      python -m venv .\env
+      # activate venv
+      .\env\Scripts\activate
+      # upgrade pip
+      pip install --upgrade pip
+      # install dependencies
+      pip install -r requirements.txt
 
 ports:
   - port: 9200
