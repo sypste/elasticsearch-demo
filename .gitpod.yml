@@ -4,9 +4,12 @@ tasks:
     command: docker run -p 9200:9200 bitnami/elasticsearch:8.3.3
   - name: Configure python
     init: |
-      pyenv virtualenv venv
-      pyenv activate venv
-      python -m pip install --upgrade pip
+      pyenv install 3.8.4
+      pyenv shell 3.8.4
+      pip install --upgrade pip
+      pip install -r requirements.txt
+      pyenv virtualenv lab
+      pyenv activate lab
       pip install -r requirements.txt
 
 ports:
