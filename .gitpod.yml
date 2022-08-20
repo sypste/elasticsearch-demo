@@ -3,13 +3,13 @@ tasks:
     command: docker run -p 9200:9200 bitnami/elasticsearch:8.3.3
   - name: Configure python
     init: |
-      pyenv shell
       export PIP_USER=false
+      pip install --upgrade pip
       pyenv virtualenv lab
       sed -i "s/include-system-site-packages = false/include-system-site-packages = true/" /home/gitpod/.pyenv/versions/lab/pyvenv.cfg;
       pyenv activate lab
-      python -m pip install --upgrade pip
       pip install -r requirements.txt
+      python3 -m ipython kernel install --user --name=lab
 
 ports:
   - port: 9200
