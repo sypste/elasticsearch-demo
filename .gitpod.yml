@@ -1,15 +1,14 @@
 tasks:
   - name: Start Elasticsearch in background
-    # init: docker pull bitnami/elasticsearch:8.3.3
     command: docker run -p 9200:9200 bitnami/elasticsearch:8.3.3
   - name: Configure python
     init: |
-      pyenv install 3.8.4
-      pyenv shell 3.8.4
-      pip install --upgrade pip
-      pip install -r requirements.txt
+      pyenv shell
+      export PIP_USER=false
       pyenv virtualenv lab
+      sed -i "s/include-system-site-packages = false/include-system-site-packages = true/" /home/gitpod/.pyenv/versions/lab/pyvenv.cfg;
       pyenv activate lab
+      python -m pip install --upgrade pip
       pip install -r requirements.txt
 
 ports:
