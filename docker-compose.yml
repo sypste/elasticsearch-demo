@@ -65,6 +65,14 @@ services:
     depends_on:
       - elasticsearch
 
+  filebeat:
+    build: 
+      context: filebeat/
+      args:
+        ELASTIC_VERSION: ${ELASTIC_VERSION}
+    volumes:
+      - ./kibana/config/kibana.yml:/usr/share/kibana/config/kibana.yml:ro,Z
+
 networks:
   elk:
     driver: bridge
