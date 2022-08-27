@@ -1,6 +1,8 @@
 tasks:
-  - name: Start Elasticsearch in background
-    command: docker run -p 9200:9200 bitnami/elasticsearch:8.3.3
+  - name: Start Elastic stack in background
+    command: |
+      docker compose up
+      gp sync-done stack
   - name: Configure python
     init: |
       export PIP_USER=false
@@ -11,10 +13,10 @@ tasks:
       pip install -r requirements.txt
       python3 -m ipython kernel install --user --name=lab
 
-ports:
-  - port: 9200
-    onOpen: ignore
-    visibility: private
+# ports:
+#   - port: 9200
+#     onOpen: ignore
+#     visibility: private
 
 vscode:
   extensions:
