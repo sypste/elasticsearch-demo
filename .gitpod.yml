@@ -1,3 +1,6 @@
+image:
+    file: .gitpod.dockerfile
+
 tasks:
   - name: Start Elastic stack in background
     command: |
@@ -7,12 +10,9 @@ tasks:
     init: |
       export PIP_USER=false
       pip install --upgrade pip
-      pyenv virtualenv lab
       sed -i "s/include-system-site-packages = false/include-system-site-packages = true/" /home/gitpod/.pyenv/versions/lab/pyvenv.cfg;
-      pyenv activate lab
       pip install -r requirements.txt
-      python3 -m ipython kernel install --user --name=lab
-
+    
 # ports:
 #   - port: 9200
 #     onOpen: ignore
