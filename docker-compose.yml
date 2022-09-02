@@ -24,19 +24,67 @@ services:
     networks:
       - elk
     depends_on:
-      - elasticsearch
+      - elasticsearch00
+      - elasticsearch01
+      - elasticsearch02
 
-  elasticsearch:
+  elasticsearch00:
     build:
       context: elasticsearch/
       args:
         ELASTIC_VERSION: ${ELASTIC_VERSION}
     volumes:
       - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro,z
-      - elasticsearch:/usr/share/elasticsearch/data:z
+      - elasticsearch00:/usr/share/elasticsearch/data:z
     ports:
       - "9200:9200"
       - "9300:9300"
+    environment:
+      ES_JAVA_OPTS: -Xms512m -Xmx512m
+      # Bootstrap password.
+      # Used to initialize the keystore during the initial startup of
+      # Elasticsearch. Ignored on subsequent runs.
+      ELASTIC_PASSWORD: ${ELASTIC_PASSWORD:-}
+      # Use single node discovery in order to disable production mode and avoid bootstrap checks.
+      # see: https://www.elastic.co/guide/en/elasticsearch/reference/current/bootstrap-checks.html
+      discovery.type: single-node
+    networks:
+      - elk
+
+  elasticsearch01:
+    build:
+      context: elasticsearch/
+      args:
+        ELASTIC_VERSION: ${ELASTIC_VERSION}
+    volumes:
+      - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro,z
+      - elasticsearch01:/usr/share/elasticsearch/data:z
+    ports:
+      - "9200:9201"
+      - "9300:9301"
+    environment:
+      ES_JAVA_OPTS: -Xms512m -Xmx512m
+      # Bootstrap password.
+      # Used to initialize the keystore during the initial startup of
+      # Elasticsearch. Ignored on subsequent runs.
+      ELASTIC_PASSWORD: ${ELASTIC_PASSWORD:-}
+      # Use single node discovery in order to disable production mode and avoid bootstrap checks.
+      # see: https://www.elastic.co/guide/en/elasticsearch/reference/current/bootstrap-checks.html
+      discovery.type: single-node
+    networks:
+      - elk
+
+  elasticsearch02:
+    build:
+      context: elasticsearch/
+      args:
+        ELASTIC_VERSION: ${ELASTIC_VERSION}
+    volumes:
+      - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro,z
+      - elasticsearch02:/usr/share/elasticsearch/data:z
+    ports:
+      - "9200:9202"
+      - "9300:9302"
     environment:
       ES_JAVA_OPTS: -Xms512m -Xmx512m
       # Bootstrap password.
@@ -63,7 +111,9 @@ services:
     networks:
       - elk
     depends_on:
-      - elasticsearch
+      - elasticsearch00
+      - elasticsearch01
+      - elasticsearch02
 
   logstash:
     build:
@@ -85,8 +135,9 @@ services:
     networks:
       - elk
     depends_on:
-      - elasticsearch
-
+      - elasticsearch00
+      - elasticsearch01
+      - elasticsearch02
 
 networks:
   elk:
@@ -94,4 +145,6 @@ networks:
 
 volumes:
   setup:
-  elasticsearch:
+  elasticsearch00:
+  elasticsearch01:
+  elasticsearch02:
