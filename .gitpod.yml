@@ -1,7 +1,7 @@
 tasks:
   - name: Start Elastic stack in background
     command: |
-      docker compose up
+      docker compose -f docker-compose.yml up
       gp sync-done stack
   - name: Configure python
     init: |
