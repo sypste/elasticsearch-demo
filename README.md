@@ -9,6 +9,10 @@ On the first start, tasks as defined in the `.gitpod.yml` file are run, which ma
 * pulling Docker containers for the Elastic stack,
 * installing Python dependencies and configuring the usage for the Jupyter notebook.
 
+Gitpod runs each task in a separate console window. 
+Don't close the consoles! 
+If, by accident, you close the console running the Docker process, you will have to start the Elastic stack back up yourself.
+
 The demo steps are detailed in the `demo-notebook.ipynb`, which should run without problem once the workspace has been fully initiated.
 
 You can also use the Kibana GUI to explore the deployed stack by viewing the opened ports in the side menu and choosing port 5601.
