@@ -3,5 +3,4 @@
     "workbench.editorAssociations": {
         "*.md": "vscode.markdown.preview.editor"
     },
-    "jupyter.widgetScriptSources": ["jsdelivr.com", "unpkg.com"],
 }
