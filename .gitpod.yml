@@ -13,11 +13,6 @@ tasks:
       sed -i "s/include-system-site-packages = false/include-system-site-packages = true/" /home/gitpod/.pyenv/versions/lab/pyvenv.cfg;
       pip install -r requirements.txt
     
-# ports:
-#   - port: 9200
-#     onOpen: ignore
-#     visibility: private
-
 vscode:
   extensions:
     - eamodio.gitlens
