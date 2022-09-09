@@ -10,9 +10,3 @@ network.host: 0.0.0.0
 #
 xpack.license.self_generated.type: trial
 xpack.security.enabled: true
-
-## OpenNLP models for English
-## see https://github.com/spinscale/elasticsearch-ingest-opennlp
-ingest.opennlp.model.file.persons: /usr/share/elasticsearch/en-ner-persons.bin
-ingest.opennlp.model.file.dates: /usr/share/elasticsearch/en-ner-locations.bin
-ingest.opennlp.model.file.locations: /usr/share/elasticsearch/en-ner-dates.bin
