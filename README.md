@@ -1,6 +1,7 @@
 # README
 
 This code is intended for usage with https://gitpod.io/.
+Use Chrome or Firefox to access your gitpod workspace.
 
 This is the accompanying follow-along for a demo article posted on the adesso developer's blog.
 To follow along with the article, [use this repo as a template for your own](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) and start a new workspace on https://gitpod.io/workspaces.
